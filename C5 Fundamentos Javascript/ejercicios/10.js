@@ -1,4 +1,4 @@
-function devolverString(texto) {
+function devolverString(string) {
   // La función recibe un argumento llamado string.
   // Debe retornar dicho string.
   // Por ejemplo: 
@@ -6,7 +6,7 @@ function devolverString(texto) {
   // "hola mundo" ---> "hola mundo" 
   // "SoyHenry" ---> "SoyHenry" 
   // Tu código:
-  return texto;
+  return string;
 }
 
 module.exports = devolverString;

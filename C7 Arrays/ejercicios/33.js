@@ -8,6 +8,22 @@ function combine(str1, str2, str3) {
   // combine("abc", "12345", "67") == "a16b27c345"
   // Tu código:
 
+  var split1 = str1.split("");
+  var split2 = str2.split("");
+  var split3 = str3.split("");
+  var lengthTotal = (split1.length + split2.length + split3.length);
+  var strAlternado = [];
+  
+  for (i=0; i<lengthTotal; i++) {
+    if (str1.length>i) {
+      strAlternado.push(str1[i]);
+    } if (str2.length>i) {
+      strAlternado.push(str2[i]);
+    } if (str3.length>i) {
+      strAlternado.push(str3[i]);
+    }
+  } var stringFinal = strAlternado.join("");
+  return stringFinal 
 }
 
 module.exports = combine;

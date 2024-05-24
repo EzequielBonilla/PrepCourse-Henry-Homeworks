@@ -8,13 +8,13 @@ function combine(str1, str2, str3) {
   // combine("abc", "12345", "67") == "a16b27c345"
   // Tu código:
 
-  var split1 = str1.split("");
+  /* var split1 = str1.split("");
   var split2 = str2.split("");
   var split3 = str3.split("");
   var lengthTotal = (split1.length + split2.length + split3.length);
-  var strAlternado = [];
+  var strAlternado = [];  */ 
   
-  for (i=0; i<lengthTotal; i++) {
+  /* for (i=0; i<lengthTotal; i++) {
     if (str1.length>i) {
       strAlternado.push(str1[i]);
     } if (str2.length>i) {
@@ -23,7 +23,25 @@ function combine(str1, str2, str3) {
       strAlternado.push(str3[i]);
     }
   } var stringFinal = strAlternado.join("");
-  return stringFinal 
-}
+  return stringFinal  */
 
+
+  // esta segunda opción recorre cada caracter del string como si fuese un elemento de array
+  var lengthTotal = (str1.length + str2.length + str3.length);
+  var strAlternado = [];
+
+  if (lengthTotal === 0) {
+    return "";
+  }
+
+  for (i=0; i<lengthTotal; i++) {
+    if (i < str1.length) {
+      strAlternado += str1[i];
+    } if (i < str2.length) {
+      strAlternado += str2[i];
+    } if (i < str3.length) {
+      strAlternado += str3[i];
+    }
+  } return strAlternado
+}
 module.exports = combine;
